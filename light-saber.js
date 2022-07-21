@@ -9,6 +9,8 @@ class LightSaberEffect {
   animate() {
     this.ctx.drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);
 
+    const locs = getMarkedLocations(this.ctx);
+    console.log("marked location:", locs);
     requestAnimationFrame(this.animate.bind(this));
   }
 }
